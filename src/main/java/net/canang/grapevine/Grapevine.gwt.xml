@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.5.0//EN"
+        "http://google-web-toolkit.googlecode.com/svn/tags/2.5.0/distro-source/core/src/gwt-module.dtd">
+<module rename-to='gwt_gae'>
+    <inherits name='com.google.gwt.user.User'/>
+    <inherits name="com.google.gwt.i18n.I18N"/>
+    <extend-property name="locale" values="en_US"/>
+    <set-property-fallback name="locale" value="en_US"/>
+    <inherits name='com.google.gwt.user.theme.clean.Clean'/>
+    <entry-point class='net.canang.grapevine.client.GrapevineEntryPoint'/>
+
+    <source path='client'/>
+    <source path='shared'/>
+</module>
