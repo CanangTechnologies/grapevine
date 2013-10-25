@@ -36,6 +36,7 @@ LINKS
 * GAE SDK - https://developers.google.com/appengine/downloads?hl=de-DE#Google_App_Engine_SDK_for_Java
 * GSON - https://code.google.com/p/google-gson/
 * issue setting up GAE plugin - http://stackoverflow.com/questions/14534270/how-to-set-up-local-google-app-server-in-intellij-11
+* deploying - http://stackoverflow.com/questions/9215977/deploy-playn-to-google-app-engine
 
 SAMPLES
 -------------------------------------------------
