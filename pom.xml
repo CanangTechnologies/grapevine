@@ -79,9 +79,10 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.25</version>
+            <groupId>org.datanucleus</groupId>
+            <artifactId>datanucleus-accessplatform-jdo-rdbms</artifactId>
+            <version>3.3.0-release</version>
+            <type>pom</type>
         </dependency>
 
     </dependencies>
@@ -108,14 +109,34 @@
                 </executions>
                 <configuration>
                     <modules>
-                        <module>com.myproject.MyProject</module>
+                        <module>net.canang.grapevine.Grapevine</module>
                     </modules>
-                    <runTarget>MyProject.html</runTarget>
+                    <runTarget>grapevine.html</runTarget>
                     <hostedWebapp>${webappDirectory}</hostedWebapp>
-                    <i18nMessagesBundle>com.myproject.client.Messages</i18nMessagesBundle>
+                    <i18nMessagesBundle>net.canang.grapevine.client.GrapevineMessages</i18nMessagesBundle>
                 </configuration>
             </plugin>
 
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.4.2</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target/${project.artifactId}-${project.version}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/webapp</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <!-- Copy static web files before executing gwt:run -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -153,7 +174,7 @@
                  of core that's already on the classpath -->
                         <groupId>org.datanucleus</groupId>
                         <artifactId>datanucleus-core</artifactId>
-                        <version>3.2.0-release</version>
+                        <version>3.3.0-release</version>
                     </dependency>
                 </dependencies>
                 <configuration>
@@ -174,5 +195,10 @@
 
         </plugins>
     </build>
-
+    <pluginRepositories>
+        <pluginRepository>
+            <id>datanucleus-maven</id>
+            <url>http://mvnrepository.com/artifact/</url>
+        </pluginRepository>
+    </pluginRepositories>
 </project>
