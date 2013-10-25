@@ -20,10 +20,14 @@ public class ScoopEntity {
     private String description;
 
     @Persistent
-    private Integer status; // WHISPER, RUMOR, FACT todo enum?
+    private Integer status; // todo enum WHISPER, RUMOR, FACT
 
     @Persistent
     private PlaceEntity place;
+
+    @Persistent
+    private UserEntity reporter;
+
 
     public Long getId() {
         return id;
