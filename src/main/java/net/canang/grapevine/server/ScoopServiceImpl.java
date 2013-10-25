@@ -21,6 +21,8 @@ public class ScoopServiceImpl extends RemoteServiceServlet implements ScoopServi
 
     private ScoopDao dao = new ScoopDaoImpl();
 
+    private ScoopConverter converter = new ScoopConverter();
+
     public void save(ScoopModel m) {
         try {
             dao.save(new ScoopEntity());
@@ -41,7 +43,7 @@ public class ScoopServiceImpl extends RemoteServiceServlet implements ScoopServi
         try {
             List<ScoopEntity> scoops = dao.findScoops();
             for (ScoopEntity scoop : scoops) {
-                models.add(new ScoopModel());
+                models.add(converter.convert(scoop));
             }
         } catch (RuntimeException e) {
         }
@@ -53,7 +55,7 @@ public class ScoopServiceImpl extends RemoteServiceServlet implements ScoopServi
         try {
             List<ScoopEntity> scoops = dao.findScoops(latitude, longitude);
             for (ScoopEntity scoop : scoops) {
-                models.add(new ScoopModel());
+                models.add(converter.convert(scoop));
             }
         } catch (RuntimeException e) {
         }

@@ -1,6 +1,7 @@
 package net.canang.grapevine.server.model;
 
 import javax.jdo.annotations.*;
+import java.math.BigDecimal;
 
 /**
  * @author rafizan.baharum
@@ -21,6 +22,12 @@ public class ScoopEntity {
 
     @Persistent
     private Integer status; // todo enum WHISPER, RUMOR, FACT
+
+    @Persistent
+    private BigDecimal priceBefore;
+
+    @Persistent
+    private BigDecimal priceAfter;
 
     @Persistent
     private PlaceEntity place;
@@ -51,6 +58,30 @@ public class ScoopEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public BigDecimal getPriceBefore() {
+        return priceBefore;
+    }
+
+    public void setPriceBefore(BigDecimal priceBefore) {
+        this.priceBefore = priceBefore;
+    }
+
+    public BigDecimal getPriceAfter() {
+        return priceAfter;
+    }
+
+    public void setPriceAfter(BigDecimal priceAfter) {
+        this.priceAfter = priceAfter;
+    }
+
+    public UserEntity getReporter() {
+        return reporter;
+    }
+
+    public void setReporter(UserEntity reporter) {
+        this.reporter = reporter;
     }
 
     public Integer getStatus() {

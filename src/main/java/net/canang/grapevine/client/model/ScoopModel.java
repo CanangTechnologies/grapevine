@@ -17,6 +17,9 @@ public class ScoopModel implements Serializable {
 
     private BigDecimal priceAfter;
 
+    private UserModel reporter;
+
+    private PlaceModel place;
 
     public Long getId() {
         return id;
@@ -64,6 +67,22 @@ public class ScoopModel implements Serializable {
 
     public void setPriceAfter(BigDecimal priceAfter) {
         this.priceAfter = priceAfter;
+    }
+
+    public UserModel getReporter() {
+        return reporter;
+    }
+
+    public void setReporter(UserModel reporter) {
+        this.reporter = reporter;
+    }
+
+    public PlaceModel getPlace() {
+        return place;
+    }
+
+    public void setPlace(PlaceModel place) {
+        this.place = place;
     }
 
     @Override

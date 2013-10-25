@@ -28,6 +28,8 @@ public class ScoopTable extends FlexTable {
         setText(0, 2, "Description");
         setText(0, 3, "Before");
         setText(0, 4, "After");
+        setText(0, 5, "Reporter");
+        setText(0, 6, "Place");
         setCellPadding(6);
 
         getRowFormatter().addStyleName(0, "listHeader");
@@ -76,6 +78,8 @@ public class ScoopTable extends FlexTable {
         setText(row, 2, m.getDescription());
         setText(row, 3, m.getPriceBefore().toEngineeringString());
         setText(row, 4, m.getPriceAfter().toEngineeringString());
+        setText(row, 5, m.getReporter().getName());
+        setText(row, 6, m.getPlace().getName());
         getCellFormatter().addStyleName(row, 3, "listNumericColumn");
         getCellFormatter().addStyleName(row, 4, "listNumericColumn");
     }
