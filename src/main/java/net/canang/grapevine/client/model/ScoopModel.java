@@ -11,7 +11,10 @@ public class ScoopModel implements Serializable {
 
     private String description;
 
+    private Integer status;
+
     private BigDecimal priceBefore;
+
     private BigDecimal priceAfter;
 
 
@@ -37,6 +40,14 @@ public class ScoopModel implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public BigDecimal getPriceBefore() {

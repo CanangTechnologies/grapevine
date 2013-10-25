@@ -20,6 +20,9 @@ public class ScoopEntity {
     private String description;
 
     @Persistent
+    private Integer status; // WHISPER, RUMOR, FACT todo enum?
+
+    @Persistent
     private PlaceEntity place;
 
     public Long getId() {
@@ -44,6 +47,14 @@ public class ScoopEntity {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public PlaceEntity getPlace() {
