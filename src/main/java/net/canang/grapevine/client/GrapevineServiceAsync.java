@@ -9,7 +9,7 @@ import java.util.List;
  * @author rafizan.baharum
  * @since 10/25/13
  */
-public interface ScoopServiceAsync {
+public interface GrapevineServiceAsync {
 
     void save(ScoopModel model, AsyncCallback<Void> callback);
 

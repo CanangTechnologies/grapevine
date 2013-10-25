@@ -1,7 +1,7 @@
 package net.canang.grapevine.server;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import net.canang.grapevine.client.ScoopService;
+import net.canang.grapevine.client.GrapevineService;
 import net.canang.grapevine.client.model.ScoopModel;
 import net.canang.grapevine.server.dao.ScoopDao;
 import net.canang.grapevine.server.dao.ScoopDaoImpl;
@@ -15,13 +15,13 @@ import java.util.logging.Logger;
  * @author rafizan.baharum
  * @since 10/25/13
  */
-public class ScoopServiceImpl extends RemoteServiceServlet implements ScoopService {
+public class GrapevineServiceImpl extends RemoteServiceServlet implements GrapevineService {
 
-    private static Logger log = Logger.getLogger(ScoopServiceImpl.class.getName());
+    private static Logger log = Logger.getLogger(GrapevineServiceImpl.class.getName());
 
     private ScoopDao dao = new ScoopDaoImpl();
 
-    private ScoopConverter converter = new ScoopConverter();
+    private GrapevineConverter converter = new GrapevineConverter();
 
     public void save(ScoopModel m) {
         try {

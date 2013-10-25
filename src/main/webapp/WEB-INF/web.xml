@@ -5,13 +5,13 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
     <!-- Servlets -->
     <servlet>
-        <servlet-name>ScoopServlet</servlet-name>
-        <servlet-class>net.canang.grapevine.server.ScoopServiceImpl</servlet-class>
+        <servlet-name>GrapevineServlet</servlet-name>
+        <servlet-class>net.canang.grapevine.server.GrapevineServiceImpl</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>ScoopServlet</servlet-name>
-        <url-pattern>/grapevine/scoopService</url-pattern>
+        <servlet-name>GrapevineServlet</servlet-name>
+        <url-pattern>/grapevine/grapevineService</url-pattern>
     </servlet-mapping>
 
     <!-- Default page to serve -->

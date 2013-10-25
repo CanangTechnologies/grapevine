@@ -10,8 +10,8 @@ import java.util.List;
  * @author rafizan.baharum
  * @since 10/25/13
  */
-@RemoteServiceRelativePath("scoopService")
-public interface ScoopService extends RemoteService {
+@RemoteServiceRelativePath("grapevineService")
+public interface GrapevineService extends RemoteService {
 
     void save(ScoopModel model) throws RuntimeException;
 

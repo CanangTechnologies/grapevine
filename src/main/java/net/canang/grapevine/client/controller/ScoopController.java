@@ -5,16 +5,14 @@ import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.i18n.client.DateTimeFormat;
 import com.google.gwt.i18n.client.DateTimeFormat.PredefinedFormat;
 import com.google.gwt.user.client.ui.*;
-import net.canang.grapevine.client.ScoopServiceAsync;
+import net.canang.grapevine.client.GrapevineServiceAsync;
 import net.canang.grapevine.client.callback.DefaultCallback;
 import net.canang.grapevine.client.model.ScoopModel;
-import net.canang.grapevine.client.widget.MessageDialog;
 import net.canang.grapevine.client.widget.ScoopTable;
 
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author rafizan.baharum
@@ -23,14 +21,14 @@ import java.util.Map;
 @SuppressWarnings({"ALL"})
 public class ScoopController extends ControllerSupport {
 
-    private ScoopServiceAsync service;
+    private GrapevineServiceAsync service;
 
     private VerticalPanel mainPanel = new VerticalPanel();
     private ScoopTable scoopTable = new ScoopTable();
     private HorizontalPanel buttonPanel = new HorizontalPanel();
     private Label lastUpdatedLabel = new Label();
 
-    public ScoopController(ScoopServiceAsync s) {
+    public ScoopController(GrapevineServiceAsync s) {
         this.service = s;
 
 //            final ScoopModelDialog incluirDialog = new IncluirScoopModelDialog();

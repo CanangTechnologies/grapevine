@@ -35,3 +35,5 @@ LINKS
 * how to intellij + GAE: http://www.jetbrains.com/idea/features/google_app_engine.html
 * GAE SDK - https://developers.google.com/appengine/downloads?hl=de-DE#Google_App_Engine_SDK_for_Java
 * sample/example: https://github.com/yaw/gwt_gae
+* GSON - https://code.google.com/p/google-gson/
+

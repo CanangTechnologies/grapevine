@@ -2,6 +2,7 @@ package net.canang.grapevine.server.model;
 
 import javax.jdo.annotations.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * @author rafizan.baharum
@@ -35,6 +36,8 @@ public class ScoopEntity {
     @Persistent
     private UserEntity reporter;
 
+    @Persistent(mappedBy = "scoop")
+    private List<BallotEntity> ballot;
 
     public Long getId() {
         return id;
@@ -98,5 +101,13 @@ public class ScoopEntity {
 
     public void setPlace(PlaceEntity place) {
         this.place = place;
+    }
+
+    public List<BallotEntity> getBallot() {
+        return ballot;
+    }
+
+    public void setBallot(List<BallotEntity> ballot) {
+        this.ballot = ballot;
     }
 }

@@ -12,7 +12,7 @@ import net.canang.grapevine.client.widget.MessageDialog;
  */
 public class GrapevineEntryPoint implements EntryPoint {
 
-    private final ScoopServiceAsync scoopServiceAsync = GWT.create(ScoopService.class);
+    private final GrapevineServiceAsync scoopServiceAsync = GWT.create(GrapevineService.class);
 
     public void onModuleLoad() {
         GWT.setUncaughtExceptionHandler(new GWT.UncaughtExceptionHandler() {
